@@ -1,9 +1,9 @@
 package com.hgx.utils.http;
 
-/*import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;*/
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 /**
  * 	连接管理器
@@ -58,25 +58,24 @@ public class HttpClientPool {
 	/**
 	 * 
 	 */
-//	private static RequestConfig requestConfig=null;
+	private static RequestConfig requestConfig=null;
 	/**
 	 * 
 	 */
-//	private static PoolingHttpClientConnectionManager connectionManager = null;
+	private static PoolingHttpClientConnectionManager connectionManager = null;
 	static {
-		/*connectionManager = new PoolingHttpClientConnectionManager();
+		connectionManager = new PoolingHttpClientConnectionManager();
 		connectionManager.setMaxTotal(POOL_MAX_TOTAL);
 		connectionManager.setDefaultMaxPerRoute(POOL_MAX_PRE_ROUTE);
 		// 设置HttpClient请求超时配置
 		requestConfig = RequestConfig.custom().setConnectTimeout(CONNECT_TIMEOUT).setSocketTimeout(SOCKET_TIMEOUT).setConnectionRequestTimeout(CONNECTION_REQUEST_TIMEOUT).build();
-		*/
 	}
 	/**获取HttpClient
 	 * @return HttpClient
 	 */
-	/*public static CloseableHttpClient getHttpClient(){
+	public static CloseableHttpClient getHttpClient(){
 		// 获取HttpClient
 		return HttpClients.custom().setDefaultRequestConfig(requestConfig).setConnectionManager(connectionManager).build();
-	}*/
+	}
 
 }
