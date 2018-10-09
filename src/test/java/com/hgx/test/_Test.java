@@ -1,5 +1,7 @@
 package com.hgx.test;
 
+import static org.junit.Assert.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -96,6 +98,11 @@ public class _Test {
 			post.abort();
 		}*/
 
+	}
+	
+	@Test
+	public void testName1() throws Exception {
+		System.out.println(StringUtils.containsIgnoreCase(System.getProperty("os.name"),"Windows"));
 	}
 
 }
